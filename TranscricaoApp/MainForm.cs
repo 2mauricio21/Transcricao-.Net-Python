@@ -99,7 +99,9 @@ public partial class MainForm : Form
 
             var progressTranscribe = new Progress<int>(p => 
             {
-                progressBar.Value = 20 + Math.Min(75, (p * 75) / 100);
+                // Progresso vai de 20% a 100%
+                // p vem de 0-100 do TranscriptionService, então mapeamos para 20-100
+                progressBar.Value = Math.Min(100, 20 + (p * 80) / 100);
                 Application.DoEvents();
             });
 

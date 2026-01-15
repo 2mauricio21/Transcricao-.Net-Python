@@ -160,8 +160,16 @@ public class TranscriptionService
                 {
                     await Task.Delay(1000);
                     var elapsed = (DateTime.Now - startTime).TotalSeconds;
+                    // Progresso vai de 10% a 95% durante o processamento
                     var estimatedProgress = 10 + Math.Min(85, (int)((elapsed / estimatedDuration) * 85));
                     progress?.Report(estimatedProgress);
+                }
+                
+                // Se o processo terminou, aguarda um pouco e vai para 98%
+                if (process.HasExited)
+                {
+                    await Task.Delay(500);
+                    progress?.Report(98);
                 }
             }, cancellationToken);
 
@@ -219,6 +227,7 @@ public class TranscriptionService
             }
 
             // Lê e processa o JSON
+            progress?.Report(99);
             var jsonContent = await File.ReadAllTextAsync(jsonFilePath, Encoding.UTF8);
             progress?.Report(100);
 

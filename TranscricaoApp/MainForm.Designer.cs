@@ -101,17 +101,16 @@ partial class MainForm
         
         // lblSelectedFile
         this.lblSelectedFile.AutoSize = true;
-        this.lblSelectedFile.Location = new Point(168, 125);
+        this.lblSelectedFile.Location = new Point(12, 155);
         this.lblSelectedFile.Name = "lblSelectedFile";
         this.lblSelectedFile.Size = new Size(0, 15);
         this.lblSelectedFile.TabIndex = 5;
         this.lblSelectedFile.Visible = false;
         
         // btnTranscribe
-        this.btnTranscribe.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         this.btnTranscribe.BackColor = Color.FromArgb(0, 122, 204);
         this.btnTranscribe.ForeColor = Color.White;
-        this.btnTranscribe.Location = new Point(638, 155);
+        this.btnTranscribe.Location = new Point(12, 180);
         this.btnTranscribe.Name = "btnTranscribe";
         this.btnTranscribe.Size = new Size(150, 30);
         this.btnTranscribe.TabIndex = 6;
@@ -120,9 +119,8 @@ partial class MainForm
         this.btnTranscribe.Click += new EventHandler(this.btnTranscribe_Click);
         
         // btnCancel
-        this.btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         this.btnCancel.Enabled = false;
-        this.btnCancel.Location = new Point(638, 155);
+        this.btnCancel.Location = new Point(12, 180);
         this.btnCancel.Name = "btnCancel";
         this.btnCancel.Size = new Size(150, 30);
         this.btnCancel.TabIndex = 7;
@@ -133,14 +131,14 @@ partial class MainForm
         
         // progressBar
         this.progressBar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-        this.progressBar.Location = new Point(12, 195);
+        this.progressBar.Location = new Point(12, 220);
         this.progressBar.Name = "progressBar";
         this.progressBar.Size = new Size(776, 23);
         this.progressBar.TabIndex = 8;
         
         // lblProgress
         this.lblProgress.AutoSize = true;
-        this.lblProgress.Location = new Point(12, 221);
+        this.lblProgress.Location = new Point(12, 246);
         this.lblProgress.Name = "lblProgress";
         this.lblProgress.Size = new Size(0, 15);
         this.lblProgress.TabIndex = 9;
@@ -148,7 +146,7 @@ partial class MainForm
         // txtTranscription
         this.txtTranscription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         this.txtTranscription.Font = new Font("Consolas", 9F);
-        this.txtTranscription.Location = new Point(12, 245);
+        this.txtTranscription.Location = new Point(12, 270);
         this.txtTranscription.Multiline = true;
         this.txtTranscription.Name = "txtTranscription";
         this.txtTranscription.ReadOnly = true;
